@@ -19,11 +19,25 @@ class BaseModel:
         self.updated_at = self.updated_at
         string_str = "[BaseModel] "
         string_str += "({}) {}".format(self.id, self.__dict__)
-        return string_str
+        return string_str   
 
     def to_dict(self):
         self.created_at = self.created_at.isoformat('T','auto')
         self.updated_at = self.updated_at.isoformat('T','auto')
         self.__dict__["__class__"] = BaseModel.__name__
         return self.__dict__
-
+    
+    def __init__(self, *args, **kwargs):
+        for key, value in kwargs.items():
+            if key == "id":
+                self.id = value
+            if key == "created_at":
+                self.created_at = datetime.fromisoformat(value)
+            if key == "updated_at":
+                self.updated_at = datetime.fromisoformat(value)
+            if key == "updated_at":
+                self.updated_at = value
+            if key == "name":
+                self.name = value
+            if key == "my_number":
+                self.my_number = value
