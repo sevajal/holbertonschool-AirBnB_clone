@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import uuid
+from __init__ import storage
 from datetime import datetime
 
 class BaseModel:
@@ -19,6 +20,7 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            storage.new()
 
     def __str__(self):
         string_str = "[BaseModel] "
@@ -27,6 +29,7 @@ class BaseModel:
 
     def save(self):
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         self.created_at = self.created_at.isoformat('T','auto')
