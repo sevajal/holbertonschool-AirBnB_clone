@@ -3,7 +3,7 @@
 import cmd
 from models.base_model import BaseModel
 from models import storage
-
+from models import user
 
 class HBNBCommand(cmd.Cmd):
     intro = 'Welcome to AirBnBClone'
@@ -33,10 +33,11 @@ class HBNBCommand(cmd.Cmd):
             return
         new_instance = BaseModel()
         new_instance.save()
+        storage.reload()
         print(new_instance.id)
 
     def do_show(self, arg):
-        """Prints the string representation of an instance(class/id)"""
+        'Prints the string representation of an instance(class/id)'
         args = self.split_args(arg)
         if not args[0]:
             print("** class name missing **")
@@ -44,7 +45,7 @@ class HBNBCommand(cmd.Cmd):
         if args[0] != "BaseModel":
             print("** class doesn't exist **")
             return
-        if not args[1]:
+        if len(args) == 1:
             print("** instance id missing **")
             return
         dir_class = storage.all()
@@ -55,6 +56,7 @@ class HBNBCommand(cmd.Cmd):
         print("** no instance found **")
 
     def do_destroy(self, arg):
+        'command to destroy an instance'
         args = self.split_args(arg)
         if not args[0]:
             print("** class name missing **")
@@ -62,7 +64,7 @@ class HBNBCommand(cmd.Cmd):
         if args[0] != "BaseModel":
             print("** class doesn't exist **")
             return
-        if not args[1]:
+        if len(args) == 1:
             print("** instance id missing **")
             return
         dir_class = storage.all()
@@ -74,14 +76,41 @@ class HBNBCommand(cmd.Cmd):
         print("** no instance found **")
 
     def do_all(self, arg):
-        if arg != "BaseModel":
+        'command to show all instances'
+        if not arg or arg == "BaseModel":
+            string_all = []
+            dir_class = storage.all()
+            for key, value in dir_class.items():
+                string_all.append(str(BaseModel(**value)))
+            print(string_all)
+            return
+        print("** class doesn't exist **")
+
+    def do_update(self,arg):
+        'command to update an instance'
+        args = self.split_args(arg)
+        if not args[0]:
+            print("** class name missing **")
+            return
+        if args[0] != "BaseModel":
             print("** class doesn't exist **")
             return
-        string_all = []
+        if len(args) == 1:
+            print("** instance id missing **")
+            return
+        if len(args) == 2:
+            print("** attribute name missing **")
+        if len(args) == 3:
+            print("** value missing **")
+
         dir_class = storage.all()
         for key, value in dir_class.items():
-            string_all.append(str(BaseModel(**value)))
-        print(string_all)
+            if key == args[0] + '.' + args[1]:
+                value[args[2]] = args[3].strip('"')
+                storage.save()
+                return
+        print("** no instance found **")
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
