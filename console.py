@@ -4,6 +4,9 @@ contains the entry point of
 the command interpreter
 """
 import cmd
+import re
+
+from urllib3 import Retry
 from models.base_model import BaseModel
 from models import storage
 
@@ -20,15 +23,15 @@ class HBNBCommand(cmd.Cmd):
         return list
 
     def do_EOF(self, arg):
-        'EOF command to exit the program\n'
-        exit(0)
+        'EOF command to exit the program'
+        return True
 
     def do_quit(self, arg):
-        'Quit command to exit the program\n'
-        exit(0)
+        'Quit command to exit the program'
+        return True
 
     def do_create(self, arg):
-        'Create command creates new instance\n'
+        'Create command creates new instance'
         if not arg:
             print("** class name missing **")
             return
