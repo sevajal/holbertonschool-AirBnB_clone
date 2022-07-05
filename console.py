@@ -10,7 +10,6 @@ from models import storage
 
 class HBNBCommand(cmd.Cmd):
     """ class command interpreter """
-    intro = 'Welcome to AirBnBClone'
     prompt = '(hbnb) '
 
     def split_args(self, line):
