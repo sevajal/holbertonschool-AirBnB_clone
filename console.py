@@ -1,15 +1,20 @@
 #!/usr/bin/python3
-
+"""
+contains the entry point of
+the command interpreter
+"""
 import cmd
 from models.base_model import BaseModel
 from models import storage
-from models import user
+
 
 class HBNBCommand(cmd.Cmd):
+    """ class command interpreter """
     intro = 'Welcome to AirBnBClone'
     prompt = '(hbnb) '
 
     def split_args(self, line):
+        """ Split arguments by spaces """
         list = []
         for arg in line.split(" "):
             list.append(arg)
@@ -86,7 +91,7 @@ class HBNBCommand(cmd.Cmd):
             return
         print("** class doesn't exist **")
 
-    def do_update(self,arg):
+    def do_update(self, arg):
         'command to update an instance'
         args = self.split_args(arg)
         if not args[0]:
