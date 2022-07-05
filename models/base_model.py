@@ -2,6 +2,7 @@
 
 import uuid
 from datetime import datetime
+from venv import create
 from models import storage
 
 class BaseModel:
@@ -32,7 +33,10 @@ class BaseModel:
         storage.save()
 
     def to_dict(self):
-        self.created_at = self.created_at.isoformat('T','auto')
-        self.updated_at = self.updated_at.isoformat('T','auto')
+        for key, value in self.__dict__.items():
+            if key == "created_at":
+                value = self.created_at.isoformat('T','auto')
+            if key == "updated_at":
+                value = self.updated_at.isoformat('T','auto')
         self.__dict__["__class__"] = BaseModel.__name__
         return self.__dict__
