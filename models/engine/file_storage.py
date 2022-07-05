@@ -1,10 +1,7 @@
 #! /usr/bin/python3
 
-from hashlib import new
 import json
 import os.path
-
-from tomlkit import value
 
 
 class FileStorage:
