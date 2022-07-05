@@ -3,6 +3,7 @@
 BaseModel class that defines all common
 attributes/methods for other classes
 """
+
 import uuid
 from datetime import datetime
 from models import storage
@@ -40,7 +41,8 @@ class BaseModel:
 
     def to_dict(self):
         """ dictionary containing all keys/values of __dict__ """
-        self.created_at = self.created_at.isoformat('T', 'auto')
-        self.updated_at = self.updated_at.isoformat('T', 'auto')
-        self.__dict__["__class__"] = self.__class__.__name__
-        return self.__dict__
+        dict_return = self.__dict__.copy()
+        dict_return["updated_at"] = self.updated_at.isoformat('T', 'auto')
+        dict_return["created_at"] = self.created_at.isoformat('T', 'auto')
+        dict_return["__class__"] = self.__class__.__name__
+        return dict_return
