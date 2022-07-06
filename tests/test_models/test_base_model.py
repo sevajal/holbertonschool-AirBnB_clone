@@ -9,7 +9,6 @@ from models.base_model import BaseModel
 
 class Test_base(unittest.TestCase):
     """Class Test for BaseMmodel"""
-
     def test_uuid(self):
         """Test the uuid"""
         bm1 = BaseModel()
@@ -37,3 +36,7 @@ class Test_base(unittest.TestCase):
         self.assertTrue(hasattr(bm1, "number"))
         self.assertEqual(bm1.number, 90)
         self.assertIsInstance(bm1.number, int)
+
+
+if __name__ == '__main__':
+    unittest.main()
