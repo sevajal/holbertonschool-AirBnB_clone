@@ -84,6 +84,17 @@ AirBnB$
 
 [User] (0e100f94-884d-4d6e-b1ac-73ccff8ee8e6) {'id': '0e100f94-884d-4d6e-b1ac-73ccff8ee8e6', 'created_at': datetime.datetime(2022, 7, 6, 15, 43, 19, 809060), 'updated_at': datetime.datetime(2022, 7, 6, 15, 43, 19, 809092)}
 
+**destroy:**
+>(hbnb) create Place
+
+9fd1f506-9cc7-4ba8-9b2f-d6bda9bbcddb
+
+>(hbnb) destroy Place 9fd1f506-9cc7-4ba8-9b2f-d6bda9bbcddb
+
+>(hbnb) show Place 9fd1f506-9cc7-4ba8-9b2f-d6bda9bbcddb
+
+** no instance found **
+
 
 ## How can you report an error or solve a question?
 > You can contact to authors sending a message through github accounts or an email to Jhojan Perlaza <4739@holbertonschool.com> or to Sebastian Carvajal <4574@holbertonschool.com>
