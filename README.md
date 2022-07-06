@@ -95,6 +95,24 @@ AirBnB$
 
 ** no instance found **
 
+**all:**
+>(hbnb) create BaseModel
+
+bf876ce4-ecc9-4185-8d22-88c23cbe4f28
+
+>(hbnb) create BaseModel
+
+61691f4f-f58c-4b58-8618-14472c984061
+
+>(hbnb) create User
+
+81fc9995-016a-4f47-85ef-62bb73ce5e1c
+
+>(hbnb) all
+
+["[BaseModel] (bf876ce4-ecc9-4185-8d22-88c23cbe4f28) {'id': 'bf876ce4-ecc9-4185-8d22-88c23cbe4f28', 'created_at': datetime.datetime(2022, 7, 6, 15, 49, 15, 483376), 'updated_at': datetime.datetime(2022, 7, 6, 15, 49, 15, 483395)}", "[BaseModel] (61691f4f-f58c-4b58-8618-14472c984061) {'id': '61691f4f-f58c-4b58-8618-14472c984061', 'created_at': datetime.datetime(2022, 7, 6, 15, 49, 31, 624055), 'updated_at': datetime.datetime(2022, 7, 6, 15, 49, 31, 624070)}", "[User] (81fc9995-016a-4f47-85ef-62bb73ce5e1c) {'id': '81fc9995-016a-4f47-85ef-62bb73ce5e1c', 'created_at': datetime.datetime(2022, 7, 6, 15, 49, 36, 876947), 'updated_at': datetime.datetime(2022, 7, 6, 15, 49, 36, 877007)}"]
+
+
 
 ## How can you report an error or solve a question?
 > You can contact to authors sending a message through github accounts or an email to Jhojan Perlaza <4739@holbertonschool.com> or to Sebastian Carvajal <4574@holbertonschool.com>
