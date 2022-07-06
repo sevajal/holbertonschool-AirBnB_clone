@@ -11,3 +11,23 @@
 * Create the first abstracted storage engine of the project: File storage.
 * Create all unittests to validate all the classes and storage engine.
 * Create the command interpreter.
+
+## Command Interpreter:
+> The console allow us to create the data model, manage objects and store and persist objects to a file (JSON file). Some examples:
+* Create a new object (ex: a new User or a new Place).
+* Retrieve an object from a file, a database etc…
+* Do operations on objects (count, compute stats, etc…).
+* Update attributes of an object.
+* Destroy an object.
+
+>The first piece is to manipulate the storage system. This storage engine will give us an abstraction between “Our objects” and “How they are stored and persisted”. This means: from our console code (the command interpreter itself) and from the front-end and RestAPI we will build later, we won’t have to pay attention (take care) of how our objects are stored. This abstraction will also allow us to change the type of storage easily without updating all of our codebase.
+
+>The console will be a tool to validate this storage engine.
+
+
+### How to start it:
+### How to use it:
+### Examples:
+
+## How can you report an error or solve a question?
+> You can contact to authors sending a message through github accounts or an email to Jhojan Perlaza <4739@holbertonschool.com> or to Sebastian Carvajal <4574@holbertonschool.com>
