@@ -12,6 +12,10 @@
 * Create all unittests to validate all the classes and storage engine.
 * Create the command interpreter.
 
+## Serialization-deserialization's flow:
+<class 'BaseModel'> -> to_dict() -> <class 'dict'> -> JSON dump -> <class 'str'> -> FILE -> <class 'str'> -> JSON load -> <class 'dict'> -> <class 'BaseModel'>
+
+
 ## Command Interpreter:
 > The console allow us to create the data model, manage objects and store and persist objects to a file (JSON file). Some examples:
 * Create a new object (ex: a new User or a new Place).
