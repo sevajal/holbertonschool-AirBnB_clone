@@ -65,15 +65,24 @@ AirBnB$
 
 >(hbnb) create BaseModel
 
->929fab0f-efb4-4eb7-9cfa-27c57cd167df
+929fab0f-efb4-4eb7-9cfa-27c57cd167df
 
 >(hbnb) create User
 
->5aa4eec2-ce66-4415-ba41-28c3207a68b6
+5aa4eec2-ce66-4415-ba41-28c3207a68b6
 
 >(hbnb) create Place
 
->63514b83-af33-4038-9c66-256fefc35165
+63514b83-af33-4038-9c66-256fefc35165
+
+**show:**
+>(hbnb) create User
+
+0e100f94-884d-4d6e-b1ac-73ccff8ee8e6
+
+>(hbnb) show User 0e100f94-884d-4d6e-b1ac-73ccff8ee8e6
+
+[User] (0e100f94-884d-4d6e-b1ac-73ccff8ee8e6) {'id': '0e100f94-884d-4d6e-b1ac-73ccff8ee8e6', 'created_at': datetime.datetime(2022, 7, 6, 15, 43, 19, 809060), 'updated_at': datetime.datetime(2022, 7, 6, 15, 43, 19, 809092)}
 
 
 ## How can you report an error or solve a question?
