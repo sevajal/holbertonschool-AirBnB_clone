@@ -112,6 +112,27 @@ bf876ce4-ecc9-4185-8d22-88c23cbe4f28
 
 ["[BaseModel] (bf876ce4-ecc9-4185-8d22-88c23cbe4f28) {'id': 'bf876ce4-ecc9-4185-8d22-88c23cbe4f28', 'created_at': datetime.datetime(2022, 7, 6, 15, 49, 15, 483376), 'updated_at': datetime.datetime(2022, 7, 6, 15, 49, 15, 483395)}", "[BaseModel] (61691f4f-f58c-4b58-8618-14472c984061) {'id': '61691f4f-f58c-4b58-8618-14472c984061', 'created_at': datetime.datetime(2022, 7, 6, 15, 49, 31, 624055), 'updated_at': datetime.datetime(2022, 7, 6, 15, 49, 31, 624070)}", "[User] (81fc9995-016a-4f47-85ef-62bb73ce5e1c) {'id': '81fc9995-016a-4f47-85ef-62bb73ce5e1c', 'created_at': datetime.datetime(2022, 7, 6, 15, 49, 36, 876947), 'updated_at': datetime.datetime(2022, 7, 6, 15, 49, 36, 877007)}"]
 
+**update:**
+>(hbnb) create BaseModel
+
+101da88b-e3f4-4bb0-813d-cbb5febd2f68
+
+>(hbnb) show BaseModel 101da88b-e3f4-4bb0-813d-cbb5febd2f68
+
+[BaseModel] (101da88b-e3f4-4bb0-813d-cbb5febd2f68) {'id': '101da88b-e3f4-4bb0-813d-cbb5febd2f68', 'created_at': datetime.datetime(2022, 7, 6, 15, 52, 53, 196636), 'updated_at': datetime.datetime(2022, 7, 6, 15, 52, 53, 196652)}
+
+>(hbnb) update BaseModel 101da88b-e3f4-4bb0-813d-cbb5febd2f68 name "Sebas"
+
+>(hbnb) show BaseModel 101da88b-e3f4-4bb0-813d-cbb5febd2f68
+
+[BaseModel] (101da88b-e3f4-4bb0-813d-cbb5febd2f68) {'id': '101da88b-e3f4-4bb0-813d-cbb5febd2f68', 'created_at': datetime.datetime(2022, 7, 6, 15, 52, 53, 196636), 'updated_at': datetime.datetime(2022, 7, 6, 15, 52, 53, 196652), 'name': 'Sebas'}
+
+>(hbnb) update BaseModel 101da88b-e3f4-4bb0-813d-cbb5febd2f68 name "Jhojan"
+
+>(hbnb) show BaseModel 101da88b-e3f4-4bb0-813d-cbb5febd2f68
+
+[BaseModel] (101da88b-e3f4-4bb0-813d-cbb5febd2f68) {'id': '101da88b-e3f4-4bb0-813d-cbb5febd2f68', 'created_at': datetime.datetime(2022, 7, 6, 15, 52, 53, 196636), 'updated_at': datetime.datetime(2022, 7, 6, 15, 52, 53, 196652), 'name': 'Jhojan'}
+
 
 
 ## How can you report an error or solve a question?
