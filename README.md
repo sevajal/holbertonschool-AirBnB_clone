@@ -32,7 +32,7 @@
 
 Documented commands (type help < topic >):
 __________________________________________
-EOF     help    quit
+EOF     all     create     destroy     help     quit     show     update
 
 (hbnb) 
 
@@ -43,7 +43,7 @@ EOF     help    quit
 
 Documented commands (type help < topic >):
 __________________________________________
-EOF     help    quit
+EOF     all     create     destroy     help     quit     show     update
 
 (hbnb) 
 
