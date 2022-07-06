@@ -15,7 +15,6 @@
 ## Serialization-deserialization's flow:
 <class 'BaseModel'> -> to_dict() -> <class 'dict'> -> JSON dump -> <class 'str'> -> FILE -> <class 'str'> -> JSON load -> <class 'dict'> -> <class 'BaseModel'>
 
-
 ## Command Interpreter:
 > The console allow us to create the data model, manage objects and store and persist objects to a file (JSON file). Some examples:
 * Create a new object (ex: a new User or a new Place).
@@ -28,6 +27,8 @@
 
 >The console will be a tool to validate this storage engine.
 
+## First approach to the project:
+<img src="https://github.com/jhojanperlaza/holbertonschool-AirBnB_clone/blob/master/AirBnBv1.png?raw=true" alt="Stage1-AirBnB_clone_project"/>
 
 ### How to start it:
 >**AirBnB$ ./console.py** """interactive mode"""
