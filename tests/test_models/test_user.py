@@ -2,6 +2,7 @@
 
 """Unittest for User Class"""
 
+
 import unittest
 from models.user import User
 from models.base_model import BaseModel
@@ -10,6 +11,7 @@ class Test_base(unittest.TestCase):
     """Class Test for User"""
 
     def test_uuid(self):
+        """Test the uuid"""
         user1 = User()
         user2 = User()
         self.assertIsInstance(user1, User)
@@ -18,16 +20,19 @@ class Test_base(unittest.TestCase):
         self.assertIsInstance(user1.id, str)
 
     def test_is_subclass(self):
+        """Test if is a subclass"""
         user1 = User()
         self.assertIsInstance(user1, BaseModel)
 
     def test_datetime(self):
+        """Test the datetime attributes"""
         user1 = User()
         self.assertTrue(hasattr(user1, "created_at"))
         self.assertTrue(hasattr(user1, "updated_at"))
         self.assertNotEqual(user1.created_at, user1.updated_at)
 
     def test_attributes(self):
+        """Test the attributes"""
         user1 = User()
         self.assertTrue(hasattr(user1, "email"))
         self.assertEqual(user1.email, "")
@@ -43,6 +48,7 @@ class Test_base(unittest.TestCase):
         self.assertIsInstance(user1.last_name, str)
 
     def test_add_attributes(self):
+        """Test new attributes"""
         user1 = User()
         user1.number = 90
         self.assertTrue(hasattr(user1, "number"))

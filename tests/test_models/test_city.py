@@ -2,6 +2,7 @@
 
 """Unittest for City Class"""
 
+
 import unittest
 from models.city import City
 from models.base_model import BaseModel
@@ -10,6 +11,7 @@ class Test_base(unittest.TestCase):
     """Class Test for City"""
 
     def test_uuid(self):
+        """Test the uuid"""
         c1 = City()
         c2 = City()
         self.assertIsInstance(c1, City)
@@ -18,16 +20,19 @@ class Test_base(unittest.TestCase):
         self.assertIsInstance(c1.id, str)
 
     def test_is_subclass(self):
+        """Test if is a subclass"""
         c1 = City()
         self.assertIsInstance(c1, BaseModel)
 
     def test_datetime(self):
+        """Test the datetime attributes"""
         c1 = City()
         self.assertTrue(hasattr(c1, "created_at"))
         self.assertTrue(hasattr(c1, "updated_at"))
         self.assertNotEqual(c1.created_at, c1.updated_at)
 
     def test_attributes(self):
+        """Test the attributes"""
         c1 = City()
         self.assertTrue(hasattr(c1, "name"))
         self.assertEqual(c1.name, "")
@@ -37,6 +42,7 @@ class Test_base(unittest.TestCase):
         self.assertIsInstance(c1.state_id, str)
 
     def test_add_attributes(self):
+        """Test new attributes"""
         c1 = City()
         c1.email = "Sebas@holberton.com"
         c1.number = 90

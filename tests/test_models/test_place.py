@@ -2,6 +2,7 @@
 
 """Unittest for Place Class"""
 
+
 import unittest
 from models.place import Place
 from models.base_model import BaseModel
@@ -10,6 +11,7 @@ class Test_base(unittest.TestCase):
     """Class Test for Place"""
 
     def test_uuid(self):
+        """Test the uuid"""
         p1 = Place()
         p2 = Place()
         self.assertIsInstance(p1, Place)
@@ -18,16 +20,19 @@ class Test_base(unittest.TestCase):
         self.assertIsInstance(p1.id, str)
 
     def test_is_subclass(self):
+        """Test if is a subclass"""
         p1 = Place()
         self.assertIsInstance(p1, BaseModel)
         
     def test_datetime(self):
+        """Test the datetime attributes"""
         p1 = Place()
         self.assertTrue(hasattr(p1, "created_at"))
         self.assertTrue(hasattr(p1, "updated_at"))
         self.assertNotEqual(p1.created_at, p1.updated_at)
 
     def test_attributes(self):
+        """Test the attributes"""
         p1 = Place()
         self.assertTrue(hasattr(p1, "name"))
         self.assertEqual(p1.name, "")
@@ -64,6 +69,7 @@ class Test_base(unittest.TestCase):
         self.assertIsInstance(p1.amenity_ids, list)
 
     def test_add_attributes(self):
+        """Test new attributes"""
         p1 = Place()
         p1.email = "Sebas@holberton.com"
         p1.number = 90
