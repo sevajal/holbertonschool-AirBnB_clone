@@ -33,19 +33,5 @@ class Test_base(unittest.TestCase):
         self.assertEqual(bm1.number, 90)
         self.assertIsInstance(bm1.number, int)
 
-
-    
-    """def test_module_docstring(self):
-        self.assertNotEqual(print(__import__("base_model").__doc__), "")
-
-    def test_class_docstring(self):
-        self.assertNotEqual(print(__import__("base_model").BaseModel.__doc__), "")
-
-    def test_func_docstrings(self):
-        self.assertNotEqual(print(__import__("base_model").__init__.__doc__), "")
-        self.assertNotEqual(print(__import__("base_model").__str__.__doc__), "")
-        self.assertNotEqual(print(__import__("base_model").save.__doc__), "")
-        self.assertNotEqual(print(__import__("base_model").to_dict.__doc__), "")"""
-
 if __name__ == '__main__':
     unittest.main()

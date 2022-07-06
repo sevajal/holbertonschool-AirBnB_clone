@@ -74,11 +74,5 @@ class Test_base(unittest.TestCase):
         self.assertEqual(p1.number, 90)
         self.assertIsInstance(p1.number, int)
 
-    """def test_module_docstring(self):
-        self.assertNotEqual(print(__import__("place").__doc__), "")
-
-    def test_class_docstring(self):
-        self.assertNotEqual(print(__import__("place").Place.__doc__), "")"""
-
 if __name__ == '__main__':
     unittest.main()

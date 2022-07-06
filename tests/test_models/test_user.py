@@ -27,12 +27,6 @@ class Test_base(unittest.TestCase):
         self.assertTrue(hasattr(user1, "updated_at"))
         self.assertNotEqual(user1.created_at, user1.updated_at)
 
-    """def test_module_docstring(self):
-        self.assertNotEqual(print(__import__("user").__doc__), "")
-
-    def test_class_docstring(self):
-        self.assertNotEqual(print(__import__("user").User.__doc__), "")"""
-
     def test_attributes(self):
         user1 = User()
         self.assertTrue(hasattr(user1, "email"))
