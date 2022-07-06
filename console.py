@@ -109,12 +109,19 @@ class HBNBCommand(cmd.Cmd):
         for key in self.dict_class.keys():
             if key == args[0]:
                 class_name = key
-
-        if not arg or arg == class_name:
+        if not arg:
             string_all = []
             dir_class = storage.all()
             for key, value in dir_class.items():
                 string_all.append(str(value))
+            print(string_all)
+            return
+        if arg == class_name:
+            string_all = []
+            dir_class = storage.all()
+            for key, value in dir_class.items():
+                if key.split('.')[0] == class_name:
+                    string_all.append(str(value))
             print(string_all)
             return
         print("** class doesn't exist **")
