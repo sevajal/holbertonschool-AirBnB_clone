@@ -22,6 +22,7 @@ class HBNBCommand(cmd.Cmd):
         return list
 
     def get_class(self, list_args):
+        """ Get the class"""
         for key, value in self.dict_class.items():
             if key == list_args[0]:
                 return value
@@ -125,8 +126,10 @@ class HBNBCommand(cmd.Cmd):
             return
         if len(args) == 2:
             print("** attribute name missing **")
+            return
         if len(args) == 3:
             print("** value missing **")
+            return
 
         dir_class = storage.all()
         for key, value in dir_class.items():
