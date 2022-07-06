@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-
-"""Unittest for City Class"""
-
+"""
+Unittest for City Class
+"""
 
 import unittest
 from models.city import City

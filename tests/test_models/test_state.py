@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-
-"""Unittest for State Class"""
-
+"""
+Unittest for State Class
+"""
 
 import unittest
 from models.state import State
