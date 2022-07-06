@@ -8,7 +8,7 @@ from models.amenity import Amenity
 from models.base_model import BaseModel
 
 
-class Test_base(unittest.TestCase):
+class Test_Amenity(unittest.TestCase):
     """Class Test for Amenity"""
 
     def test_uuid(self):

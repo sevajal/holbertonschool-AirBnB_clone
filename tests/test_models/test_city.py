@@ -8,7 +8,7 @@ from models.city import City
 from models.base_model import BaseModel
 
 
-class Test_base(unittest.TestCase):
+class Test_City(unittest.TestCase):
     """Class Test for City"""
 
     def test_uuid(self):

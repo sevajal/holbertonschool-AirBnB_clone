@@ -8,7 +8,7 @@ from models.state import State
 from models.base_model import BaseModel
 
 
-class Test_base(unittest.TestCase):
+class Test_State(unittest.TestCase):
     """Class Test for State"""
 
     def test_uuid(self):

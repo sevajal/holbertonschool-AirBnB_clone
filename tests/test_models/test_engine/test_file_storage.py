@@ -7,7 +7,7 @@ import unittest
 from models.engine.file_storage import FileStorage
 
 
-class Test_base(unittest.TestCase):
+class Test_FileStorage(unittest.TestCase):
     """Class Test for FileStorage"""
 
     @classmethod

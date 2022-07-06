@@ -8,7 +8,7 @@ from models.review import Review
 from models.base_model import BaseModel
 
 
-class Test_base(unittest.TestCase):
+class Test_Review(unittest.TestCase):
     """Class Test for Review"""
 
     def test_uuid(self):

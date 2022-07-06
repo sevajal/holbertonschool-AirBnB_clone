@@ -8,7 +8,7 @@ from models.user import User
 from models.base_model import BaseModel
 
 
-class Test_base(unittest.TestCase):
+class Test_User(unittest.TestCase):
     """Class Test for User"""
 
     def test_uuid(self):

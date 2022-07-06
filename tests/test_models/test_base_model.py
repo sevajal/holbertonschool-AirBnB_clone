@@ -7,7 +7,7 @@ import unittest
 from models.base_model import BaseModel
 
 
-class Test_base_model(unittest.TestCase):
+class Test_BaseModel(unittest.TestCase):
     """Class Test for BaseModel"""
 
     def test_uuid(self):
