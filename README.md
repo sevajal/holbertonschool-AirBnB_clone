@@ -26,6 +26,29 @@
 
 
 ### How to start it:
+>**AirBnB$ ./console.py** """interactive mode"""
+
+(hbnb) help
+
+Documented commands (type help < topic >):
+__________________________________________
+EOF     help    quit
+
+(hbnb) 
+
+(hbnb) quit
+
+>**AirBnB$ echo "help" | ./console.py** """non-interactive mode"""
+(hbnb)
+
+Documented commands (type help < topic >):
+__________________________________________
+EOF     help    quit
+
+(hbnb) 
+
+AirBnB$
+
 ### How to use it:
 ### Examples:
 
