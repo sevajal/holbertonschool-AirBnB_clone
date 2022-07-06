@@ -50,6 +50,15 @@ EOF     help    quit
 AirBnB$
 
 ### How to use it:
+>This is the command list:
+* EOF - Exits the console
+* quit - Exits the console
+* create - Creates an instance - Usage: create Class
+* show - Prints the string representation of an instance - Usage: show Class id
+* destroy - Deletes an intance - Usage: destroy Class id
+* all - Prints all string representation of all instance - Usage: all or all Class
+* update - Updates an instance - Usage: update Class id attribute value
+
 ### Examples:
 
 ## How can you report an error or solve a question?
