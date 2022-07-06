@@ -5,12 +5,23 @@
 >This is the first step towards building a full web application: the AirBnB clone. This first step is very important because we will use what we build during this project with all other following projects: HTML/CSS templating, database storage, API, front-end integration…
 
 >Steps:
-* Create a parent class (called BaseModel) to take care of the initialization, serialization and deserialization of the future instances.
+* Create a parent class (called **BaseModel**) to take care of the initialization, serialization and deserialization of the future instances.
 * Create a simple flow of serialization/deserialization: Instance <-> Dictionary <-> JSON string <-> file.
 * Create all classes used for AirBnB (User, State, City, Place…) that inherit from BaseModel.
 * Create the first abstracted storage engine of the project: File storage.
 * Create all unittests to validate all the classes and storage engine.
 * Create the command interpreter.
+
+>Our child classes from BaseModel:
+* User
+* State
+* City
+* Place
+* Amenity
+* Review
+
+>And our class for the engine:
+* FileStorage
 
 ## Serialization-deserialization's flow:
 <class 'BaseModel'> -> to_dict() -> <class 'dict'> -> JSON dump -> <class 'str'> -> FILE -> <class 'str'> -> JSON load -> <class 'dict'> -> <class 'BaseModel'>
