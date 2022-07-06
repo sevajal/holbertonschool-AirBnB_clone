@@ -61,6 +61,20 @@ AirBnB$
 * **update** - Updates an instance - Usage: update Class id attribute value
 
 ### Examples:
+**Create:**
+
+>(hbnb) create BaseModel
+
+>929fab0f-efb4-4eb7-9cfa-27c57cd167df
+
+>(hbnb) create User
+
+>5aa4eec2-ce66-4415-ba41-28c3207a68b6
+
+>(hbnb) create Place
+
+>63514b83-af33-4038-9c66-256fefc35165
+
 
 ## How can you report an error or solve a question?
 > You can contact to authors sending a message through github accounts or an email to Jhojan Perlaza <4739@holbertonschool.com> or to Sebastian Carvajal <4574@holbertonschool.com>
