@@ -34,7 +34,9 @@ class FileStorage:
     def reload(self):
         """ Deserializes the JSON file to """
         from models.base_model import BaseModel
-        dict_class = {'BaseModel': BaseModel}
+        from models.user import User
+
+        dict_class = {'BaseModel': BaseModel, 'User': User}
 
         if os.path.exists(self.__file_path):
             with open(self.__file_path, mode="r", encoding="utf-8") as file:

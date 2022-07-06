@@ -7,12 +7,12 @@ the command interpreter
 import cmd
 from models.base_model import BaseModel
 from models import storage
-
+from models.user import User
 
 class HBNBCommand(cmd.Cmd):
     """ class command interpreter """
     prompt = '(hbnb) '
-    dict_class = {"BaseModel": BaseModel}
+    dict_class = {"BaseModel": BaseModel, 'User': User}
 
     def split_args(self, line):
         """ Split arguments by spaces """
