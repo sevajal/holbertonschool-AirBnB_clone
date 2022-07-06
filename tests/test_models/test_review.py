@@ -38,6 +38,17 @@ class Test_base(unittest.TestCase):
         self.assertTrue(hasattr(r1, "text"))
         self.assertEqual(r1.text, "")
         self.assertIsInstance(r1.text, str)
+
+    def test_add_attributes(self):
+        r1 = Review()
+        r1.email = "Sebas@holberton.com"
+        r1.number = 90
+        self.assertTrue(hasattr(r1, "email"))
+        self.assertEqual(r1.email, "Sebas@holberton.com")
+        self.assertIsInstance(r1.email, str)
+        self.assertTrue(hasattr(r1, "number"))
+        self.assertEqual(r1.number, 90)
+        self.assertIsInstance(r1.number, int)
     
     """def test_module_docstring(self):
         self.assertNotEqual(print(__import__("review").__doc__), "")

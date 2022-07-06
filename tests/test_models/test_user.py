@@ -48,5 +48,12 @@ class Test_base(unittest.TestCase):
         self.assertEqual(user1.last_name, "")
         self.assertIsInstance(user1.last_name, str)
 
+    def test_add_attributes(self):
+        user1 = User()
+        user1.number = 90
+        self.assertTrue(hasattr(user1, "number"))
+        self.assertEqual(user1.number, 90)
+        self.assertIsInstance(user1.number, int)
+
 if __name__ == '__main__':
     unittest.main()

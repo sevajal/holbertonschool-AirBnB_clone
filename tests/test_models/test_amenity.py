@@ -33,6 +33,17 @@ class Test_base(unittest.TestCase):
         self.assertEqual(am1.name, "")
         self.assertIsInstance(am1.name, str)
 
+    def test_add_attributes(self):
+        am1 = Amenity()
+        am1.email = "Sebas@holberton.com"
+        am1.number = 90
+        self.assertTrue(hasattr(am1, "email"))
+        self.assertEqual(am1.email, "Sebas@holberton.com")
+        self.assertIsInstance(am1.email, str)
+        self.assertTrue(hasattr(am1, "number"))
+        self.assertEqual(am1.number, 90)
+        self.assertIsInstance(am1.number, int)
+
     """def test_module_docstring(self):
         self.assertNotEqual(print(__import__("amenity").__doc__), "")
 
