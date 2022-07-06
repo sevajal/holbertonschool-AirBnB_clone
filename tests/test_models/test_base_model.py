@@ -37,7 +37,3 @@ class Test_base(unittest.TestCase):
         self.assertTrue(hasattr(bm1, "number"))
         self.assertEqual(bm1.number, 90)
         self.assertIsInstance(bm1.number, int)
-
-
-if __name__ == '__main__':
-    unittest.main()
