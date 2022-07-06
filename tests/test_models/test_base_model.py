@@ -16,5 +16,25 @@ class Test_base(unittest.TestCase):
         self.assertNotEqual(bm1.id, bm2.id)
         self.assertIsInstance(bm1.id, str)
 
+    def test_datetime(self):
+        bm1 = BaseModel()
+        self.assertTrue(hasattr(bm1, "created_at"))
+        self.assertTrue(hasattr(bm1, "updated_at"))
+        self.assertNotEqual(bm1.created_at, bm1.updated_at)
+
+
+    
+    """def test_module_docstring(self):
+        self.assertNotEqual(print(__import__("base_model").__doc__), "")
+
+    def test_class_docstring(self):
+        self.assertNotEqual(print(__import__("base_model").BaseModel.__doc__), "")
+
+    def test_func_docstrings(self):
+        self.assertNotEqual(print(__import__("base_model").__init__.__doc__), "")
+        self.assertNotEqual(print(__import__("base_model").__str__.__doc__), "")
+        self.assertNotEqual(print(__import__("base_model").save.__doc__), "")
+        self.assertNotEqual(print(__import__("base_model").to_dict.__doc__), "")"""
+
 if __name__ == '__main__':
     unittest.main()
