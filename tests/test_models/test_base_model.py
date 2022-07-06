@@ -1,14 +1,15 @@
 #!/usr/bin/python3
+"""Unittest for BaseModel Class
 """
-Unittest for BaseModel Class
-"""
+
 
 import unittest
 from models.base_model import BaseModel
 
 
 class Test_base(unittest.TestCase):
-    """Class Test for BaseMmodel"""
+    """Class Test for BaseModel"""
+
     def test_uuid(self):
         """Test the uuid"""
         bm1 = BaseModel()
