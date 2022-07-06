@@ -7,12 +7,20 @@ the command interpreter
 import cmd
 from models.base_model import BaseModel
 from models import storage
+from models.state import State
+from models.city import City
 from models.user import User
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
+
 
 class HBNBCommand(cmd.Cmd):
     """ class command interpreter """
     prompt = '(hbnb) '
-    dict_class = {"BaseModel": BaseModel, 'User': User}
+    dict_class = {'BaseModel': BaseModel, 'User': User, 'State': State,
+                  'City': City, 'Amenity': Amenity, 'Place': Place,
+                  'Review': Review}
 
     def split_args(self, line):
         """ Split arguments by spaces """
@@ -46,7 +54,7 @@ class HBNBCommand(cmd.Cmd):
             return
         args = self.split_args(arg)
         class_name = self.get_class(args)
-        if class_name == None:
+        if class_name is None:
             print("** class doesn't exist **")
             return
         new_instance = class_name()
@@ -60,7 +68,7 @@ class HBNBCommand(cmd.Cmd):
             return
         args = self.split_args(arg)
         class_name = self.get_class(args)
-        if class_name == None:
+        if class_name is None:
             print("** class doesn't exist **")
             return
         if len(args) == 1:
@@ -80,7 +88,7 @@ class HBNBCommand(cmd.Cmd):
             return
         args = self.split_args(arg)
         class_name = self.get_class(args)
-        if class_name == None:
+        if class_name is None:
             print("** class doesn't exist **")
             return
         if len(args) == 1:
@@ -118,7 +126,7 @@ class HBNBCommand(cmd.Cmd):
             return
         args = self.split_args(arg)
         class_name = self.get_class(args)
-        if class_name == None:
+        if class_name is None:
             print("** class doesn't exist **")
             return
         if len(args) == 1:
