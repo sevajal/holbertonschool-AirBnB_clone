@@ -15,6 +15,8 @@
 ## Serialization-deserialization's flow:
 <class 'BaseModel'> -> to_dict() -> <class 'dict'> -> JSON dump -> <class 'str'> -> FILE -> <class 'str'> -> JSON load -> <class 'dict'> -> <class 'BaseModel'>
 
+>For this first step, we have to write in a file all our objects/instances created/updated in our command interpreter and restore them when we start it. We can’t store and restore a Python instance of a class as “Bytes”, the only way is to convert it to a serializable data structure as the one above.
+
 ## Command Interpreter:
 > The console allow us to create the data model, manage objects and store and persist objects to a file (JSON file). Some examples:
 * Create a new object (ex: a new User or a new Place).
