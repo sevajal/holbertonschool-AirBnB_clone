@@ -7,6 +7,7 @@ import unittest
 from models.city import City
 from models.base_model import BaseModel
 
+
 class Test_base(unittest.TestCase):
     """Class Test for City"""
 
@@ -52,6 +53,7 @@ class Test_base(unittest.TestCase):
         self.assertTrue(hasattr(c1, "number"))
         self.assertEqual(c1.number, 90)
         self.assertIsInstance(c1.number, int)
+
 
 if __name__ == '__main__':
     unittest.main()

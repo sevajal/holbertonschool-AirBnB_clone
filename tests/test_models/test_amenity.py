@@ -7,6 +7,7 @@ import unittest
 from models.amenity import Amenity
 from models.base_model import BaseModel
 
+
 class Test_base(unittest.TestCase):
     """Class Test for Amenity"""
 
@@ -23,7 +24,7 @@ class Test_base(unittest.TestCase):
         """Test if is a subclass"""
         am1 = Amenity()
         self.assertIsInstance(am1, BaseModel)
-    
+
     def test_datetime(self):
         """Test the datetime attributes"""
         am1 = Amenity()
@@ -49,6 +50,7 @@ class Test_base(unittest.TestCase):
         self.assertTrue(hasattr(am1, "number"))
         self.assertEqual(am1.number, 90)
         self.assertIsInstance(am1.number, int)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -7,6 +7,7 @@ import unittest
 from models.review import Review
 from models.base_model import BaseModel
 
+
 class Test_base(unittest.TestCase):
     """Class Test for Review"""
 
@@ -55,6 +56,7 @@ class Test_base(unittest.TestCase):
         self.assertTrue(hasattr(r1, "number"))
         self.assertEqual(r1.number, 90)
         self.assertIsInstance(r1.number, int)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -7,6 +7,7 @@ import unittest
 from models.place import Place
 from models.base_model import BaseModel
 
+
 class Test_base(unittest.TestCase):
     """Class Test for Place"""
 
@@ -23,7 +24,7 @@ class Test_base(unittest.TestCase):
         """Test if is a subclass"""
         p1 = Place()
         self.assertIsInstance(p1, BaseModel)
-        
+
     def test_datetime(self):
         """Test the datetime attributes"""
         p1 = Place()
@@ -79,6 +80,7 @@ class Test_base(unittest.TestCase):
         self.assertTrue(hasattr(p1, "number"))
         self.assertEqual(p1.number, 90)
         self.assertIsInstance(p1.number, int)
+
 
 if __name__ == '__main__':
     unittest.main()

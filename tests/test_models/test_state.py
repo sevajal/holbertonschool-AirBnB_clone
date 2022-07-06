@@ -7,6 +7,7 @@ import unittest
 from models.state import State
 from models.base_model import BaseModel
 
+
 class Test_base(unittest.TestCase):
     """Class Test for State"""
 
@@ -49,6 +50,7 @@ class Test_base(unittest.TestCase):
         self.assertTrue(hasattr(s1, "number"))
         self.assertEqual(s1.number, 90)
         self.assertIsInstance(s1.number, int)
+
 
 if __name__ == '__main__':
     unittest.main()

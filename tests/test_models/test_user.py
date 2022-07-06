@@ -7,6 +7,7 @@ import unittest
 from models.user import User
 from models.base_model import BaseModel
 
+
 class Test_base(unittest.TestCase):
     """Class Test for User"""
 
@@ -54,6 +55,7 @@ class Test_base(unittest.TestCase):
         self.assertTrue(hasattr(user1, "number"))
         self.assertEqual(user1.number, 90)
         self.assertIsInstance(user1.number, int)
+
 
 if __name__ == '__main__':
     unittest.main()

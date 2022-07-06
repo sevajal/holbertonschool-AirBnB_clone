@@ -4,8 +4,8 @@
 
 
 import unittest
-from models.engine import file_storage
 from models.engine.file_storage import FileStorage
+
 
 class Test_base(unittest.TestCase):
     """Class Test for FileStorage"""
@@ -14,12 +14,13 @@ class Test_base(unittest.TestCase):
     def setUpClass(cls):
         """Test the setup"""
         FileStorage.__objects = {}
-    
+
     def test_attributes(self):
         """Test the attributes"""
         file = FileStorage.__objects
         self.assertEqual(file, {})
         self.assertIsInstance(file, dict)
+
 
 if __name__ == '__main__':
     unittest.main()

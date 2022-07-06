@@ -6,6 +6,7 @@
 import unittest
 from models.base_model import BaseModel
 
+
 class Test_base(unittest.TestCase):
     """Class Test for BaseMmodel"""
 
@@ -24,7 +25,7 @@ class Test_base(unittest.TestCase):
         self.assertTrue(hasattr(bm1, "created_at"))
         self.assertTrue(hasattr(bm1, "updated_at"))
         self.assertNotEqual(bm1.created_at, bm1.updated_at)
-    
+
     def test_add_attributes(self):
         """Test new attributes"""
         bm1 = BaseModel()
@@ -36,6 +37,7 @@ class Test_base(unittest.TestCase):
         self.assertTrue(hasattr(bm1, "number"))
         self.assertEqual(bm1.number, 90)
         self.assertIsInstance(bm1.number, int)
+
 
 if __name__ == '__main__':
     unittest.main()
