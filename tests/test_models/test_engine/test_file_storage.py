@@ -37,8 +37,8 @@ class Test_FileStorage(unittest.TestCase):
         basemodel_dict = self.base.to_dict()
         all_objs = storage.all()
 
-        key = basemodel_dict['_class_'] + "." + basemodel_dict['id']
-        self.assertEqual(key in all_objs, False)
+        key = basemodel_dict['__class__'] + "." + basemodel_dict['id']
+        self.assertEqual(key in all_objs, True)
 
 if __name__ == '__main__':
     unittest.main()

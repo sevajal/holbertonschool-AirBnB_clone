@@ -49,8 +49,8 @@ class BaseModelTests(unittest.TestCase):
         self.assertEqual(bm1.name, bm1_json["name"])
         self.assertEqual("BaseModel", bm1_json["__class__"])
         self.assertEqual(bm1.id, bm1_json["id"])
-        self.assertIsInstance(bm1.created_at, datetime.datetime)
-        self.assertIsInstance(bm1.updated_at, datetime.datetime)
+        self.assertIsInstance(bm1.created_at, datetime)
+        self.assertIsInstance(bm1.updated_at, datetime)
 
 
 if __name__ == '__main__':
