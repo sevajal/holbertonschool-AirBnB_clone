@@ -5,6 +5,9 @@ the command interpreter
 """
 
 import cmd
+from hashlib import new
+
+from click import command
 from models.base_model import BaseModel
 from models import storage
 from models.state import State
@@ -34,6 +37,16 @@ class HBNBCommand(cmd.Cmd):
         for key, value in self.dict_class.items():
             if key == list_args[0]:
                 return value
+
+    def precmd(self, arg):
+        ' checks if arg is a method '
+        if "()" in arg:
+            class_name = arg.split('.')[0]
+            command = arg.split('.')[1]
+            command = command.split('()')[0]
+            new_arg = command + ' ' + class_name
+            return new_arg
+        return arg
 
     def do_EOF(self, arg):
         'EOF command to exit the program'
