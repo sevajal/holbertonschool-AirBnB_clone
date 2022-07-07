@@ -5,9 +5,6 @@ the command interpreter
 """
 
 import cmd
-from hashlib import new
-
-from click import command
 from models.base_model import BaseModel
 from models import storage
 from models.state import State
@@ -39,8 +36,8 @@ class HBNBCommand(cmd.Cmd):
                 return value
 
     def precmd(self, arg):
-        ' checks if arg is a method '
-        if "()" in arg:
+        'checks if arg is a method'
+        if "()" in arg and "." in arg:
             class_name = arg.split('.')[0]
             command = arg.split('.')[1]
             command = command.split('()')[0]
