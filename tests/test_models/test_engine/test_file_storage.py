@@ -14,22 +14,6 @@ import json
 
 class Test_FileStorage(unittest.TestCase):
     """Class Test for FileStorage"""
-    base = BaseModel()
-
-    @classmethod
-    def setUpClass(cls):
-        """Test the setup"""
-        FileStorage.__objects = {}
-
-    def test_attributes(self):
-        """Test the attributes"""
-        file = FileStorage.__objects
-        self.assertEqual(file, {})
-        self.assertIsInstance(file, dict)
-
-    def testClassInstance(self):
-        """ Check instance """
-        self.assertIsInstance(storage, FileStorage)
 
     basemodel = BaseModel()
 
