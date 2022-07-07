@@ -1,15 +1,46 @@
 #!/usr/bin/python3
-""" Module of Unittests """
+"""
+Unittest for FileStorage Class
+"""
+
+from re import T
 import unittest
-from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
+from models.base_model import BaseModel 
 from models import storage
 import os
 import json
 
+class Test_FileStorage(unittest.TestCase):
+    """Class Test for FileStorage"""
+    base = BaseModel()
 
-class FileStorageTests(unittest.TestCase):
-    """ Suite of File Storage Tests """
+    @classmethod
+    def setUpClass(cls):
+        """Test the setup"""
+        FileStorage.__objects = {}
+
+    def test_attributes(self):
+        """Test the attributes"""
+        file = FileStorage.__objects
+        self.assertEqual(file, {})
+        self.assertIsInstance(file, dict)
+
+    def testClassInstance(self):
+        """ Check instance """
+        self.assertIsInstance(storage, FileStorage)
+
+    def testStoreBaseModel(self):
+        """ Test save and reload functions """
+        self.base.new_name = "new_instance"
+        self.base.save()
+        basemodel_dict = self.base.to_dict()
+        all_objs = storage.all()
+
+        key = basemodel_dict['__class__'] + "." + basemodel_dict['id']
+        self.assertEqual(key in all_objs, True)
+
+        """ pilas"""
 
     basemodel = BaseModel()
 
@@ -25,7 +56,7 @@ class FileStorageTests(unittest.TestCase):
         all_objs = storage.all()
 
         key = basemodel_dict['__class__'] + "." + basemodel_dict['id']
-        self.assertEqual(key in all_objs, False)
+        self.assertEqual(key in all_objs, True)
 
     def testStoreBaseModel2(self):
         """ Test save, reload and update functions """
@@ -35,7 +66,7 @@ class FileStorageTests(unittest.TestCase):
 
         key = basemodel_dict['__class__'] + "." + basemodel_dict['id']
 
-        self.assertEqual(key in storage.all(), False)
+        self.assertEqual(key in storage.all(), True)
         self.assertEqual(basemodel_dict['my_name'], "First name")
 
         create1 = basemodel_dict['created_at']
@@ -45,7 +76,7 @@ class FileStorageTests(unittest.TestCase):
         self.basemodel.save()
         basemodel_dict = self.basemodel.to_dict()
 
-        self.assertEqual(key in storage.all(), False)
+        self.assertEqual(key in storage.all(), True)
 
         create2 = basemodel_dict['created_at']
         update2 = basemodel_dict['updated_at']
@@ -83,7 +114,6 @@ class FileStorageTests(unittest.TestCase):
             FileStorage.save(self, 100)
 
         self.assertEqual(str(e.exception), msg)
-
 
 if __name__ == '__main__':
     unittest.main()
