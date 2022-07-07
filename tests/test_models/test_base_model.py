@@ -5,6 +5,9 @@
 
 import unittest
 from models.base_model import BaseModel
+from models import storage
+from models.engine.file_storage import FileStorage
+from datetime import datetime
 
 
 class BaseModelTests(unittest.TestCase):
@@ -37,6 +40,17 @@ class BaseModelTests(unittest.TestCase):
         self.assertTrue(hasattr(bm1, "number"))
         self.assertEqual(bm1.number, 90)
         self.assertIsInstance(bm1.number, int)
+
+    def test_general(self):
+        bm1 = BaseModel()
+        bm1.name = "Jhon"
+        bm1.save()
+        bm1_json = bm1.to_dict()
+        self.assertEqual(bm1.name, bm1_json["name"])
+        self.assertEqual("BaseModel", bm1_json["__class__"])
+        self.assertEqual(bm1.id, bm1_json["id"])
+        self.assertIsInstance(bm1.created_at, datetime.datetime)
+        self.assertIsInstance(bm1.updated_at, datetime.datetime)
 
 
 if __name__ == '__main__':
