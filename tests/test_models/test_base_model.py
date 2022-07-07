@@ -56,11 +56,17 @@ class BaseModelTests(unittest.TestCase):
 
     def testSave(self):
         """ Test for a BaseModel instance """
+        self.my_model.first_name = "First"
+        self.my_model.save()
+
         first_dict = self.my_model.to_dict()
+
         self.my_model.first_name = "Second"
         self.my_model.save()
         sec_dict = self.my_model.to_dict()
+
         self.assertEqual(first_dict['created_at'], sec_dict['created_at'])
+        self.assertNotEqual(first_dict['updated_at'], sec_dict['updated_at'])
 
 
 if __name__ == '__main__':
