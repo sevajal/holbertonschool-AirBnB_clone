@@ -37,11 +37,17 @@ class HBNBCommand(cmd.Cmd):
 
     def precmd(self, arg):
         'checks if arg is a method'
-        if "()" in arg and "." in arg:
+        if "(" in arg and "." in arg:
             class_name = arg.split('.')[0]
             command = arg.split('.')[1]
-            command = command.split('()')[0]
-            new_arg = command + ' ' + class_name
+            command_2 = command.split('(')[0]
+            id = command.split('(')[1]
+            if id == ')':
+                new_arg = command_2 + ' ' + class_name
+            else:
+                id = id.split(')')[0]
+                id = id.replace('"', '')
+                new_arg = command_2 + ' ' + class_name + ' ' + id
             return new_arg
         return arg
 
