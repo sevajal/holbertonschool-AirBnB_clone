@@ -54,19 +54,6 @@ class BaseModelTests(unittest.TestCase):
 
     my_model = BaseModel()
 
-    def testBaseModel1(self):
-        """ Test for a BaseModel instance """
-
-        self.my_model.name = "My First Model"
-        self.my_model.my_number = 89
-        self.my_model.save()
-        my_model_json = self.my_model.to_dict()
-
-        self.assertEqual(self.my_model.name, my_model_json['name'])
-        self.assertEqual(self.my_model.my_number, my_model_json['my_number'])
-        self.assertEqual('BaseModel', my_model_json['__class__'])
-        self.assertEqual(self.my_model.id, my_model_json['id'])
-
     def testSave(self):
         """ Test for a BaseModel instance """
         self.my_model.first_name = "First"
