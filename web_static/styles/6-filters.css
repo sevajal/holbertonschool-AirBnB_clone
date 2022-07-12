@@ -55,6 +55,8 @@ h4 {
     border-radius: 4px;
     display: none;
     margin-left: -25px;
+    z-index: 1;
+    position: relative;
 }
 .amenities .popover {
     margin-left: -12%;
